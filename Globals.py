@@ -44,7 +44,7 @@ class Globals:
 	defaultContrast = 0
 	defaultSaturation = 0
 	defaultSharpness = 0
-	defaultResolution = 17	# 1920 x 1080 (HD)
+	defaultResolution = 1	# 1920 x 1080 (HD)
 	# Newly added
 	useVideoPort = False
 	imageDenoise = True
