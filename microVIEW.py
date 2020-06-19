@@ -258,15 +258,15 @@ class microVIEW ( Frame ):
 		#self.ResolutionChanged(res[Globals.defaultResolution])
 		#19-06-2020
 		#If HQ Camera add additional resolution of 'Ultra : (4056x3040)'
-		#if self.camera.revision == "imx477": 	#HQ Camera
+		if self.camera.revision == "imx477": 	#HQ Camera
 		#	res.append('Ultra: (4056x3040)')
-		#self.resolution = Slider(BasicPage,text=res,padding=(25,25,25,25),
-		#	language=self.language,
-		#	background=Globals.defaultBackgroundColor,
-		#	callback=self.ResolutionChanged,
-		#	value=Globals.defaultResolution)
-		#self.resolution.grid(row=6,column=0,sticky='ew',padx=20,pady=(0,20))
-		#self.ResolutionChanged(res[Globals.defaultResolution])
+		self.resolution = Slider(BasicPage,text=res,padding=(25,25,25,25),
+			language=self.language,
+			background=Globals.defaultBackgroundColor,
+			callback=self.ResolutionChanged,
+			value=Globals.defaultResolution)
+		self.resolution.grid(row=6,column=0,sticky='ew',padx=20,pady=(0,20))
+		self.ResolutionChanged(res[Globals.defaultResolution])
 		'''
 		Build the Advanced notebook page for Camera, Annotate
 		'''
