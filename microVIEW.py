@@ -252,7 +252,7 @@ class microVIEW ( Frame ):
 		#19-06-2020
 		#If HQ Camera add additional resolution of 'Ultra : (4056x3040)'
 		if self.camera.revision == "imx477": 	#HQ Camera
-		#	res.append('Ultra: (4056x3040)')
+			res.append('Ultra: (4056x3040)')
 		self.resolution = Slider(BasicPage,text=res,padding=(25,25,25,25),
 			language=self.language,
 			background=Globals.defaultBackgroundColor,
