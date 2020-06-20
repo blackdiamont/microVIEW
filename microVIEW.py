@@ -244,18 +244,11 @@ class microVIEW ( Frame ):
 				 'WXGA_2: (1280x800)', 'SXGA: (1280x1024)', 'SXGA+: (1400x1050)',
 				 'UXGA: (1600x1200)', 'WSXGA+: (1680x1050)', 'HD 1080: (1920x1080)',
 				 'WUXGA: (1920x1200)', '2K: (2048x1080)', 'QXGA: (2048x1536)',
-				 'WQXGA: (2560x1600)', 'WQXGA: (2592x1944)','Max Photo: (3280x2464)','Ultra : (4056x3040)']
+				 'WQXGA: (2560x1600)', 'WQXGA: (2592x1944)']
 		# 3-3-2020 
 		# If V2 Camera add additional resolution of 'Max Photo: (3280x2464)'
-		#if self.camera.revision == "imx219": 	# V2 camera
-		#	res.append('Max Photo: (3280x2464)')
-		#self.resolution = Slider(BasicPage,text=res,padding=(25,25,25,25),
-		#	language=self.language,
-		#	background=Globals.defaultBackgroundColor,
-		#	callback=self.ResolutionChanged,
-		#	value=Globals.defaultResolution)
-		#self.resolution.grid(row=6,column=0,sticky='ew',padx=20,pady=(0,20))
-		#self.ResolutionChanged(res[Globals.defaultResolution])
+		if self.camera.revision == "imx219": 	# V2 camera
+			res.append('Max Photo: (3280x2464)')
 		#19-06-2020
 		#If HQ Camera add additional resolution of 'Ultra : (4056x3040)'
 		if self.camera.revision == "imx477": 	#HQ Camera
