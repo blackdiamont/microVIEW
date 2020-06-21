@@ -251,7 +251,7 @@ class microVIEW ( Frame ):
 			res.append('Max Photo: (3280x2464)')
 		#19-06-2020
 		#If HQ Camera add additional resolution of 'Ultra : (4056x3040)'
-		eif self.camera.revision == "testc": 	#HQ Camera
+		elif self.camera.revision == "testc": 	#HQ Camera
 			res.append('Ultra: (4056x3040)')
 		self.resolution = Slider(BasicPage,text=res,padding=(25,25,25,25),
 			language=self.language,
