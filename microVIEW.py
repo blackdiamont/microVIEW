@@ -249,6 +249,10 @@ class microVIEW ( Frame ):
 		# If V2 Camera add additional resolution of 'Max Photo: (3280x2464)'
 		if self.camera.revision == "imx219": 	# V2 camera
 			res.append('Max Photo: (3280x2464)')
+		#19-06-2020
+		#If HQ Camera add additional resolution of 'Ultra : (4056x3040)'
+		elif self.camera.revision == "testc": 	#HQ Camera
+			res.append('Ultra: (4056x3040)')
 		self.resolution = Slider(BasicPage,text=res,padding=(25,25,25,25),
 			language=self.language,
 			background=Globals.defaultBackgroundColor,
@@ -256,7 +260,6 @@ class microVIEW ( Frame ):
 			value=Globals.defaultResolution)
 		self.resolution.grid(row=6,column=0,sticky='ew',padx=20,pady=(0,20))
 		self.ResolutionChanged(res[Globals.defaultResolution])
-
 		'''
 		Build the Advanced notebook page for Camera, Annotate
 		'''
